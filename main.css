@@ -6,6 +6,11 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 /* similar styles */
 section .title{
     position: relative;
@@ -93,6 +98,7 @@ section{
 }
 
 .nav-bar .menu li a{
+    display: block;
     color: #000;
     margin-left: 10px;
     font-size: 15px;
@@ -110,6 +116,31 @@ section{
 }
 
 /* menu-btn styling */
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: darkcyan;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
 .menu-btn{
     color:#000;
     cursor: pointer;
@@ -366,7 +397,7 @@ section{
 .portfolio .portfolio-content .card:hover{
     background:darkcyan;
     color: #000;
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 .portfolio .portfolio-content .card:hover i,
@@ -467,15 +498,78 @@ section{
 .contact .right form .fields .field{
     height: 45px;
     width: 100%; 
+    margin-bottom: 15px;
 }
 
-.contact .right form .field input{
+.contact .right form .textarea{
+    height: 80px;
+}
+
+.contact .right form .name{
+    margin-right: 10px;
+}
+
+.contact .right form .email{
+    margin-left: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea{
     height: 100%;
     width: 100%;
     border: 1px solid lightgrey;
     border-radius: 6px;
     outline: none;
     padding: 0 15px;
+    font-size: 17px;
+    font-family: 'poppins', sans-serif;
+}
+
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button {
+    height: 47px;
+    width: 100%;
+}
+
+.contact .right form .button button{
+    height: 100%;
+    width: 100%;
+    border: 2px solid darkcyan;
+    background: darkcyan;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+.contact .right form .button button:hover{
+    color: darkcyan;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+/* Footer Section Stylings */
+footer{
+    font-family: 'poppins', sans-serif;
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+}
+
+footer span a{
+    color: darkcyan;
+}
+
+footer span a:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in;
 }
 
 /* for small screens */
@@ -571,6 +665,10 @@ section{
     margin-bottom: 20px;
     }
 
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
 }
 
 @media (max-width: 690px) {

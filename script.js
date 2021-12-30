@@ -6,8 +6,22 @@ $(document).ready(function () {
         } else {
             $('.nav-bar').removeClass("scrolled");
         }
+
+        if (this.scroll > 500) {
+            $('.scroll-up-btn').addClass("show");
+        }
+        else {
+            $('.scroll-up-btn').removeClass("show");
+        }
     });
 
+    // slide-up script
+    $('.scroll-up-btn').click(function () {
+        $('html').animate({ scrollTop: 0 });
+    });
+
+
+    // Navbar Script
     $('.menu-btn').click(function () {
         $('.nav-bar .menu').toggleClass('active');
         $('.menu-btn i').toggleClass('active');
