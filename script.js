@@ -20,7 +20,6 @@ $(document).ready(function () {
         $('html').animate({ scrollTop: 0 });
     });
 
-
     // Navbar Script
     $('.menu-btn').click(function () {
         $('.nav-bar .menu').toggleClass('active');

@@ -435,6 +435,7 @@ section{
     background:#000;
 }
 
+/* contact section styling */
 .contact .contact-content .column{
     width: calc(50% - 30px);
 }
@@ -490,6 +491,8 @@ section{
     font-size: 15px;
 }
 
+/* Right */
+
 .contact .right form .fields{
     display: flex;
 }
@@ -525,30 +528,31 @@ section{
     font-family: 'poppins', sans-serif;
 }
 
+
 .contact .right form .textarea textarea{
     padding-top: 10px;
     resize: none;
 }
 
-.contact .right form .button {
+.contact .right form .button-area {
     height: 47px;
     width: 100%;
 }
 
-.contact .right form .button button{
+.contact .right form .button-area button{
     height: 100%;
     width: 100%;
-    border: 2px solid darkcyan;
-    background: darkcyan;
-    color: white;
+    border: 2px solid #222;
+    background: none;
+    color: #000;
     font-size: 20px;
     font-weight: 500;
     border-radius: 6px;
 }
 
-.contact .right form .button button:hover{
+.contact .right form .button-area button:hover{
     color: darkcyan;
-    background: none;
+    background: #fff;
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
